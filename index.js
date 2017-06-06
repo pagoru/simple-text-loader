@@ -11,7 +11,7 @@ module.exports = class SimpleTextLoader {
         if(obj.tag !== undefined) this._tag = obj.tag;
 
         this._interval = (obj.interval === undefined) ? randomMaxMin(50, 500) : obj.time;
-        this._paused = (obj.paused === undefined) ? true : obj.paused;
+        this._paused = (obj.paused === undefined) ? false : obj.paused;
         this._currentPosition = (obj.currentPosition === undefined) ? 0 : obj.currentPosition;
         this._patterns = (obj.patterns === undefined) ? ['⠇', '⠋', '⠙', '⠸', '⠴', '⠦'] : obj.patterns;
         this._invert = (obj.invert === undefined) ? false : obj.invert;
