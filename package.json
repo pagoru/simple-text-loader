@@ -1,6 +1,6 @@
 {
   "name": "simple-text-spinner",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "",
   "main": "index.js",
   "author": "pagoru",
@@ -8,5 +8,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/pagoru/simple-text-spinner"
-  }
+  },
+  "keywords": ["spin","spinner","spinning","progress","indicator","text"]
 }

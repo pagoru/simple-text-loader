@@ -3,7 +3,7 @@
  */
 module.exports = class SimpleTextLoader {
 
-    constructor(obj){
+    constructor(obj = {}){
         function randomMaxMin(min, max) {
             return Math.floor((Math.random() * max) + min);
         }
