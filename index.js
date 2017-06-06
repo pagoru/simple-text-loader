@@ -1,7 +1,7 @@
 /**
  * Created by pablo on 06/06/2017.
  */
-module.exports = class SimpleTextLoader {
+module.exports = class SimpleTextSpinner {
 
     constructor(obj = {}){
         function randomMaxMin(min, max) {
