@@ -10,7 +10,7 @@ module.exports = class SimpleTextLoader {
 
         if(obj.tag !== undefined) this._tag = obj.tag;
 
-        this._time = (obj.time === undefined) ? randomMaxMin(50, 500) : obj.time;
+        this._interval = (obj.interval === undefined) ? randomMaxMin(50, 500) : obj.time;
         this._paused = (obj.paused === undefined) ? true : obj.paused;
         this._currentPosition = (obj.currentPosition === undefined) ? 0 : obj.currentPosition;
         this._patterns = (obj.patterns === undefined) ? ['⠇', '⠋', '⠙', '⠸', '⠴', '⠦'] : obj.patterns;
@@ -36,7 +36,7 @@ module.exports = class SimpleTextLoader {
             ? (this._currentPosition === 0) ? this._patterns.length - 1 : this._currentPosition - 1
             : (this._currentPosition === this._patterns.length - 1) ? 0 : this._currentPosition + 1;
 
-        setTimeout(this._interval.bind(this), this._time);
+        setTimeout(this._interval.bind(this), this._interval);
 
     }
 
@@ -63,8 +63,8 @@ module.exports = class SimpleTextLoader {
     setTag(tag){
         this._tag = tag;
     }
-    setTime(time){
-        this._time = time;
+    setInterval(interval){
+        this._interval = interval;
     }
 
     isPaused(){
