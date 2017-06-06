@@ -73,5 +73,4 @@ module.exports = class SimpleTextLoader {
     isStopped(){
         return this._stop;
     }
-
-}
+};
