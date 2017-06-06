@@ -70,7 +70,4 @@ module.exports = class SimpleTextLoader {
     isPaused(){
         return this._paused;
     }
-    isStopped(){
-        return this._stop;
-    }
 };
