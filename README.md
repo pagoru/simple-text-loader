@@ -1,46 +1,46 @@
 This module was created to allow create easy animations with text in node.
 
-[![npm version](https://badge.fury.io/js/simple-text-loader.svg)](https://www.npmjs.com/package/simple-text-loader) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![npm version](https://badge.fury.io/js/simple-text-spinner.svg)](https://www.npmjs.com/package/simple-text-spinner) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Installation
 
 ```sh
-npm install -S simple-text-loader
+npm install -S simple-text-spinner
 ```
 
 ## Usage
 ```js
-const SimpleTextLoader = require('simple-text-loader');
+const SimpleTextSpinner = require('simple-text-spinner');
 
-let loader = new SimpleTextLoader({options});
+let spinner = new SimpleTextSpinner({options});
 
 //Plays the current animation
-loader.play();
+spinner.play();
 //Stops the current animation
-loader.pause();
+spinner.pause();
 //Inverts the animation
-loader.invert();
+spinner.invert();
 
 //Returns the current animation text
-loader.getText();
+spinner.getText();
 //Returns the percentatge amount of the animation
-loader.getPercentage();
+spinner.getPercentage();
 
 //Sets the label that will affect the animation, can be undefined.
 //Works like jquery ('.class', '#id', 'div')
-loader.setTag(str);
-//Sets the time between every frame of the animation
-loader.setTime(int);
+spinner.setTag(str);
+//Sets the interval between every frame of the animation
+spinner.setInterval(int);
 
 //Returns if the animations is paused
-loader.isPaused();
+spinner.isPaused();
 ```
 
 ### Options
 ```js
-new SimpleTextLoader({
+new SimpleTextSpinner({
   tag: '.foo', //default undefined
-  time: 150, //default random(50, 500)
+  interval: 150, //default random(50, 500)
   paused: true, //default false
   currentPosition: 2, //default 0
   patterns: ['.', '..', '...'] //default ['⠇', '⠋', '⠙', '⠸', '⠴', '⠦']
