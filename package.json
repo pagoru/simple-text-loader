@@ -1,5 +1,5 @@
 {
-  "name": "simple-text-loader",
+  "name": "simple-text-spinner",
   "version": "1.0.5",
   "description": "",
   "main": "index.js",
@@ -7,6 +7,6 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pagoru/simple-text-loader"
+    "url": "https://github.com/pagoru/simple-text-spinner"
   }
 }
