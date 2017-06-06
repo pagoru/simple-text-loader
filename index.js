@@ -16,10 +16,10 @@ module.exports = class SimpleTextLoader {
         this._patterns = (obj.patterns === undefined) ? ['⠇', '⠋', '⠙', '⠸', '⠴', '⠦'] : obj.patterns;
         this._invert = (obj.invert === undefined) ? false : obj.invert;
 
-        this._interval();
+        this._loop();
     }
 
-    _interval(){
+    _loop(){
         if(this._paused) return;
 
         this._text = this._patterns[this._currentPosition];
@@ -36,7 +36,7 @@ module.exports = class SimpleTextLoader {
             ? (this._currentPosition === 0) ? this._patterns.length - 1 : this._currentPosition - 1
             : (this._currentPosition === this._patterns.length - 1) ? 0 : this._currentPosition + 1;
 
-        setTimeout(this._interval.bind(this), this._interval);
+        setTimeout(this._loop.bind(this), this._interval);
 
     }
 
