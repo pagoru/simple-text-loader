@@ -39,11 +39,11 @@ spinner.isPaused();
 ### Options
 ```js
 new SimpleTextSpinner({
-  tag: '.foo', //default undefined
-  interval: 150, //default random(50, 500)
-  paused: true, //default false
-  currentPosition: 2, //default 0
-  patterns: ['.', '..', '...'] //default ['⠇', '⠋', '⠙', '⠸', '⠴', '⠦']
-  invert: true //default false
+  tag: undefined,
+  interval: 100,
+  paused: false,
+  defaultPosition: 0,
+  pattern: ['⠇', '⠋', '⠙', '⠸', '⠴', '⠦'],
+  inverse: false
 });
 ```
