@@ -39,7 +39,7 @@ module.exports = class SimpleTextSpinner {
     play(){
         if(this._paused) {
             this._paused = false;
-            this._interval();
+            this._loop();
         }
     }
     pause(){
