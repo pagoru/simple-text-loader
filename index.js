@@ -6,7 +6,7 @@ module.exports = class SimpleTextSpinner {
     constructor(obj = {}){
         if(obj.tag !== undefined) this._tag = obj.tag;
 
-        this._interval = (obj.interval === undefined) ? 100 : obj.time;
+        this._interval = (obj.interval === undefined) ? 100 : obj.interval;
         this._paused = (obj.paused === undefined) ? false : obj.paused;
         this._defaultPosition = (obj.defaultPosition === undefined) ? 0 : obj.defaultPosition;
         this._pattern = (obj.pattern === undefined) ? ['⠇', '⠋', '⠙', '⠸', '⠴', '⠦'] : obj.pattern;
