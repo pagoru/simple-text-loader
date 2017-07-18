@@ -34,6 +34,9 @@ spinner.setInterval(int);
 
 //Returns if the animations is paused
 spinner.isPaused();
+
+//Prints in console the current text
+spinner.print();
 ```
 
 ### Options

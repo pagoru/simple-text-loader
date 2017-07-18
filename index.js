@@ -1,6 +1,8 @@
 /**
  * Created by pablo on 06/06/2017.
  */
+const readline = require('readline');
+
 module.exports = class SimpleTextSpinner {
 
     constructor(obj = {}){
@@ -65,5 +67,15 @@ module.exports = class SimpleTextSpinner {
 
     isPaused(){
         return this._paused;
+    }
+
+    print(){
+        if(this._paused) return;
+
+        readline.clearLine(process.stdout, 0);
+        readline.cursorTo(process.stdout, 0, null);
+        process.stdout.write(this.getText());
+
+        setTimeout(this.print.bind(this), this._interval);
     }
 };
