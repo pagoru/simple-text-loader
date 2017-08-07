@@ -27,8 +27,8 @@ module.exports = class SimpleTextSpinner {
             if(this._tag.startsWith('#')) elements = document.getElementById(this._tag.substr(1, this._tag.length - 1));
 
             if(elements.length>1){
-	            for (let i = 0; i < elements.length; i++) {
-		            elements[i].innerHTML = this._text;
+	        for (let i = 0; i < elements.length; i++) {
+		    elements[i].innerHTML = this._text;
                 }
             }else{
                 elements.innerHTML = this._text;
